@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DREAM TACT [SYS_CORE_V1]</title>
+  <meta name="description" content="AI/Digital Transformation & Infrastructure Custom Solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=23">
+</head>
+<body>
+  <!-- Global Terminal Canvas Background -->
+  <canvas id="digital-tact-canvas"></canvas>
+
+  <div id="scan-line"></div>
+  <div id="vignette"></div>
+
+  <!-- Command Header (Nav) -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-title">
+          <div class="logo-line-1"><span class="blinking-cursor">_</span> Dream Tact</div>
+          <div class="logo-line-2">DX Solutions</div>
+        </div>
+        <div class="logo-subtitle">
+          [ ドリームタクト ディーエックス ソリューションズ ]
+        </div>
+      </div>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-links" id="nav-links">
+      <button class="nav-btn active" data-target="home">[00] ホーム</button>
+      <button class="nav-btn" data-target="about">[01] お悩み</button>
+      <button class="nav-btn" data-target="services">[02] サービス</button>
+      <button class="nav-btn" data-target="usp">[03] 選ばれる理由</button>
+      <button class="nav-btn" data-target="ai-diagnosis">[04] AI補助金診断</button>
+      <button class="nav-btn" data-target="pricing">[05] 料金体系</button>
+      <button class="nav-btn" data-target="profile">[06] プロフィール</button>
+      <button class="nav-btn highlight" data-target="contact">[EXE] お問い合わせ</button>
+    </nav>
+  </header>
+
+  <main id="app-container">
+    
+    <!-- [00] HOME / INIT -->
+    <section class="screen-section active" id="home">
+      <div class="terminal-box">
+        <div class="term-header">
+          <span>root@dream-tact:~# ./connect_partner.sh --target "local_business"</span>
+        </div>
+        <div class="term-body">
+          <h1 class="hero-title type-effect hero-title-main">あなたの「困りごと」を、</h1>
+          <h1 class="hero-title type-effect secondary hero-title-main"><span>AI</span>したい。</h1>
+          
+          <div class="crypto-text mt-20 crypto-text-desc">
+            <p>「集客したいが方法が分からない」「最新ITの使い道が謎」<br>
+            そんなお悩みに寄り添う、地域の<span class="cyber-gold bold-gold">ITかかりつけ医（デジタルパートナー）</span>です。</p>
+            
+            <p class="mt-10">私たちは「ツールを作って終わり」ではありません。<br>
+            現場で使える専用アプリの開発から、日々の運用サポート、スタッフの<span class="neon-text">IT人材教育までを、あなたの隣でサポート</span>します。</p>
+            
+            <p class="mt-10 cyan-text">「何から相談していいか分からない」という状態こそ、私たちの出番です。<br>
+            専門用語は一切不要. まずは、あなたの「お困りごと」をそのまま聞かせてください。</p>
+          </div>
+          
+          <div class="hero-actions mt-40">
+            <button class="btn btn-cyber trigger-nav" data-target="services">提供サービスを見る</button>
+            <button class="btn btn-cyber trigger-nav" data-target="about">よくあるお悩みを見る</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [01] PAIN POINTS -->
+    <section class="screen-section" id="about">
+      <div class="container container-wide">
+        <h2 class="section-title">> こんなお悩みありませんか？</h2>
+        <div class="grid cards-3">
+          <div class="cyber-card">
+            <div class="card-header">課題_01: 認知不足</div>
+            <h3 class="pain">「いい商品なのに知られていない」</h3>
+            <div class="card-footer">
+              <span class="solution-tag">解決策: マーケティング支援</span>
+              <p>コンテンツ制作＆広告運用で<br><span class="cyan-text">認知を最大化</span></p>
+            </div>
+          </div>
+          <div class="cyber-card">
+            <div class="card-header">課題_02: リソース不足</div>
+            <h3 class="pain">「人手不足で業務が回らない」</h3>
+            <div class="card-footer">
+              <span class="solution-tag">解決策: 業務自動化</span>
+              <p>オーダーメイドアプリ制作で<br><span class="neon-green">仕組みを自動化</span></p>
+            </div>
+          </div>
+          <div class="cyber-card">
+            <div class="card-header">課題_03: ITスキルの壁</div>
+            <h3 class="pain">「最新のIT・AIの使い道が謎」</h3>
+            <div class="card-footer">
+              <span class="solution-tag">解決策: IT・AI人材育成</span>
+              <p>AIコンサル＆人材育成で<br><span class="cyber-gold">最新のITも社内で自走化</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-container mt-40">
+          <button class="btn btn-cyber trigger-nav" data-target="contact">> 今すぐ相談する (Contact)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- [02] SERVICES -->
+    <section class="screen-section" id="services">
+      <div class="container container-wide">
+        <h2 class="section-title">> 4つの提供サービス</h2>
+        <div class="services-grid">
+          <div class="service-panel">
+            <div class="panel-uid">サービス_1: Create Contents</div>
+            <h3 class="service-title"><span class="neon-text">魅せる</span> コンテンツ制作</h3>
+            <p class="service-tagline">「伝わる」をデザイン。</p>
+            <p class="service-text">SNS動画、Webサイト、PR動画から、デジタルサイネージ向けの映像制作まで。スマホ1つで顧客の心を動かすクリエイティブを生成・提供します。</p>
+          </div>
+          <div class="service-panel">
+            <div class="panel-uid">サービス_2: Digital Marketing</div>
+            <h3 class="service-title"><span class="neon-text">届ける</span> 広告代理・運用</h3>
+            <p class="service-tagline">「狙った客」を連れてくる。</p>
+            <p class="service-text">Google・Instagram・LINE広告など。少額予算からでも無駄なく効果を出せる、地域密着型の「効率的な配信設定」を行います。</p>
+          </div>
+          <div class="service-panel">
+            <div class="panel-uid">サービス_3: Application Design</div>
+            <h3 class="service-title"><span class="neon-text">創る</span> アプリ・システム制作</h3>
+            <p class="service-tagline">「現場」をラクにする。</p>
+            <p class="service-text">高額で複雑なシステムは不要です。毎日の「面倒な手作業」を自動化し、現場のスタッフが簡単に使える専用の業務効率化ツールをお作りします。</p>
+          </div>
+          <div class="service-panel">
+            <div class="panel-uid">サービス_4: Education</div>
+            <h3 class="service-title"><span class="neon-text">育てる</span> デジタル人材育成</h3>
+            <p class="service-tagline">「社内」で自走できる仕組みを。</p>
+            <p class="service-text">デジタルコンテンツを作れる人材を育成する教育プログラムを提供。ツールを導入して終わりではなく、現場で使いこなし、更新していけるスキル習得をサポートします。</p>
+          </div>
+        </div>
+        <div class="cta-container mt-40">
+          <button class="btn btn-cyber trigger-nav" data-target="contact">> 今すぐ相談する (Contact)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- [03] USP -->
+    <section class="screen-section" id="usp">
+      <div class="container container-medium">
+        <div class="data-box">
+          <h2 class="section-title">> 選ばれる3つの理由</h2>
+          <div class="server-rack">
+            <div class="rack-unit">
+              <div class="rack-status led-green"></div>
+              <div class="rack-info">
+                <h3>[CORE_01] デジタル人材の育成サポート</h3>
+                <p>ツールを導入して終わりではなく、御社内で継続して運用できるよう、IT・デジタル人材の教育面も含めて伴走します。</p>
+              </div>
+            </div>
+            <div class="rack-unit">
+              <div class="rack-status led-blue"></div>
+              <div class="rack-info">
+                <h3>[CORE_02] 「トヨタ流」現場主義の伴走</h3>
+                <p>トヨタグループで培った「問題解決手法」と徹底した「現場主義」の「カイゼン」目線でDXを推進します。</p>
+              </div>
+            </div>
+            <div class="rack-unit">
+              <div class="rack-status led-gold"></div>
+              <div class="rack-info">
+                <h3>[CORE_03] ハイブリッドな問題解決力</h3>
+                <p>製造現場で培った「業務改善（守り）」の視点と、最新のAI・ITスキルを使った「業務効率化（攻め）」を掛け合わせた、独自のサポート体制をご提供します。</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-container mt-40">
+            <button class="btn btn-cyber trigger-nav" data-target="contact">> 今すぐ相談する (Contact)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [04] AI SUBSIDY DIAGNOSIS -->
+    <section class="screen-section" id="ai-diagnosis">
+      <div class="container container-medium">
+        <h2 class="section-title">> AI補助金・助成金 申請可否診断</h2>
+        <div class="terminal-box terminal-box-full ai-diag-terminal">
+          <div class="term-header">
+            <span>root@dream-tact:~# ./subsidy_diagnosis.sh --mode "interactive"</span>
+          </div>
+          <div class="term-body">
+            <div class="ai-diag-intro mb-30">
+              <p class="log-text"><span class="neon-text">> INIT:</span> お困りごとに合った<span class="cyber-gold">補助金・助成金</span>が使えるかどうかをAIが簡易診断します。</p>
+              <p class="log-text mt-10 text-muted">※ 本診断は一般的な情報に基づく簡易判定であり、補助金・助成金の採択を保証するものではありません。<br>※ 申請はお客様ご自身で行っていただく必要があります。正確な申請可否は個別にご相談ください。</p>
+            </div>
+            <!-- Step Wizard -->
+            <div id="ai-diag-wizard">
+              <!-- STEP 1: 業種 -->
+              <div class="diag-step active" data-step="1">
+                <div class="step-indicator">
+                  <span class="step-badge">STEP 1 / 4</span>
+                  <div class="step-progress"><div class="step-progress-bar w-25"></div></div>
+                </div>
+                <h3 class="diag-question"><span class="cyber-cyan-text">> </span>御社の業種を選択してください</h3>
+                <div class="diag-options" id="diag-industry">
+                  <button class="diag-option-btn" data-value="製造業"><span class="opt-icon">⚙️</span>製造業</button>
+                  <button class="diag-option-btn" data-value="小売・飲食業"><span class="opt-icon">🏪</span>小売・飲食業</button>
+                  <button class="diag-option-btn" data-value="サービス業"><span class="opt-icon">💼</span>サービス業</button>
+                  <button class="diag-option-btn" data-value="建設業"><span class="opt-icon">🏗️</span>建設業</button>
+                  <button class="diag-option-btn" data-value="IT・通信業"><span class="opt-icon">💻</span>IT・通信業</button>
+                  <button class="diag-option-btn" data-value="医療・福祉"><span class="opt-icon">🏥</span>医療・福祉</button>
+                  <button class="diag-option-btn" data-value="農林水産業"><span class="opt-icon">🌾</span>農林水産業</button>
+                  <button class="diag-option-btn" data-value="その他"><span class="opt-icon">📋</span>その他</button>
+                </div>
+              </div>
+              <!-- STEP 2: 従業員数 -->
+              <div class="diag-step" data-step="2">
+                <div class="step-indicator">
+                  <span class="step-badge">STEP 2 / 4</span>
+                  <div class="step-progress"><div class="step-progress-bar w-50"></div></div>
+                </div>
+                <h3 class="diag-question"><span class="cyber-cyan-text">> </span>従業員数はどのくらいですか？</h3>
+                <div class="diag-options" id="diag-size">
+                  <button class="diag-option-btn" data-value="1人（個人事業主）"><span class="opt-icon">👤</span>1人（個人事業主）</button>
+                  <button class="diag-option-btn" data-value="2〜5人"><span class="opt-icon">👥</span>2〜5人</button>
+                  <button class="diag-option-btn" data-value="6〜20人"><span class="opt-icon">🏢</span>6〜20人</button>
+                  <button class="diag-option-btn" data-value="21〜50人"><span class="opt-icon">🏬</span>21〜50人</button>
+                  <button class="diag-option-btn" data-value="51〜100人"><span class="opt-icon">🏭</span>51〜100人</button>
+                  <button class="diag-option-btn" data-value="101人以上"><span class="opt-icon">🏙️</span>101人以上</button>
+                </div>
+              </div>
+              <!-- STEP 3: お困りごと -->
+              <div class="diag-step" data-step="3">
+                <div class="step-indicator">
+                  <span class="step-badge">STEP 3 / 4</span>
+                  <div class="step-progress"><div class="step-progress-bar w-75"></div></div>
+                </div>
+                <h3 class="diag-question"><span class="cyber-cyan-text">> </span>今の一番の「お困りごと」は？<span class="diag-hint">（複数選択可）</span></h3>
+                <div class="diag-options multi" id="diag-problems">
+                  <button class="diag-option-btn" data-value="売上・集客を増やしたい"><span class="opt-icon">📈</span>売上・集客を増やしたい</button>
+                  <button class="diag-option-btn" data-value="人手不足を解消したい"><span class="opt-icon">🤝</span>人手不足を解消したい</button>
+                  <button class="diag-option-btn" data-value="IT・DXを導入したい"><span class="opt-icon">🚀</span>IT・DXを導入したい</button>
+                  <button class="diag-option-btn" data-value="新商品・新サービスを作りたい"><span class="opt-icon">💡</span>新商品・新サービスを作りたい</button>
+                  <button class="diag-option-btn" data-value="海外展開したい"><span class="opt-icon">🌏</span>海外展開したい</button>
+                  <button class="diag-option-btn" data-value="設備投資・省エネ対策"><span class="opt-icon">🔧</span>設備投資・省エネ対策</button>
+                  <button class="diag-option-btn" data-value="人材育成・研修"><span class="opt-icon">🎓</span>人材育成・研修</button>
+                  <button class="diag-option-btn" data-value="事業承継・M&A"><span class="opt-icon">🔄</span>事業承継・M&amp;A</button>
+                </div>
+                <button class="btn btn-cyber diag-next-btn mt-20" id="diag-step3-next" disabled>選択した内容で次へ ▶</button>
+              </div>
+              <!-- STEP 4: 現在の状況 -->
+              <div class="diag-step" data-step="4">
+                <div class="step-indicator">
+                  <span class="step-badge">STEP 4 / 4</span>
+                  <div class="step-progress"><div class="step-progress-bar w-100"></div></div>
+                </div>
+                <h3 class="diag-question"><span class="cyber-cyan-text">> </span>現在の状況を教えてください</h3>
+                <div class="diag-options" id="diag-status">
+                  <button class="diag-option-btn" data-value="創業予定（まだ開業前）"><span class="opt-icon">🌱</span>創業予定（まだ開業前）</button>
+                  <button class="diag-option-btn" data-value="創業3年未満"><span class="opt-icon">🌿</span>創業3年未満</button>
+                  <button class="diag-option-btn" data-value="創業3年以上"><span class="opt-icon">🌳</span>創業3年以上</button>
+                  <button class="diag-option-btn" data-value="事業転換・新規事業を検討中"><span class="opt-icon">🔀</span>事業転換・新規事業を検討中</button>
+                </div>
+              </div>
+              <!-- RESULT -->
+              <div class="diag-step" data-step="result" id="diag-result-section">
+                <div class="step-indicator">
+                  <span class="step-badge neon-text">DIAGNOSIS COMPLETE</span>
+                  <div class="step-progress"><div class="step-progress-bar full"></div></div>
+                </div>
+                <div class="diag-loading" id="diag-loading">
+                  <div class="diag-spinner"></div>
+                  <p class="log-text">analyzing subsidy_database.dat ...</p>
+                </div>
+                <div id="diag-results" class="diag-results-area hidden"></div>
+                <div class="diag-result-footer mt-20 hidden" id="diag-result-footer">
+                  <p class="log-text mb-20">※ 上記は一般的な情報に基づく簡易判定であり、補助金・助成金の採択を保証するものではありません。<br>※ 申請はお客様ご自身で行っていただく必要があります。申請時期・詳細条件は変更される場合があります。</p>
+                  <div class="diag-result-actions">
+                    <button class="btn btn-cyber" id="diag-restart">🔄 もう一度診断する</button>
+                    <button class="btn btn-cyber trigger-nav" data-target="contact">📩 専門家に無料相談する</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [05] PRICING -->
+    <section class="screen-section" id="pricing">
+      <div class="container container-wide">
+        <h2 class="section-title">> 料金体系 (PRICING)</h2>
+        <div class="system-msg system-msg-mb pricing-init-msg">
+          <span class="prompt">> INIT:</span> 初回のご相談・DX診断は <span class="neon-text">無料（0円）</span> です。<br>
+          以下の基本価格（目安）をベースに、課題に合わせた無駄のないお見積りをご提案します。
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card" data-accent="cyan">
+            <div class="pricing-card-header">
+              <span class="pricing-card-icon">🎬</span>
+              <div>
+                <div class="pricing-card-uid">サービス_1: Create Contents</div>
+                <h3 class="pricing-card-title"><span class="neon-text">魅せる</span> コンテンツ制作</h3>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="pricing-menu-list">
+                <li><span class="pricing-menu-name">PR・イベント動画制作（ショート動画等）</span><span class="pricing-menu-price">30,000円〜</span></li>
+                <li><span class="pricing-menu-name">サイネージ向け映像コンテンツ制作</span><span class="pricing-menu-price">30,000円〜</span></li>
+                <li><span class="pricing-menu-name">その他映像・デザイン制作</span><span class="pricing-menu-price price-consult">要相談</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing-card" data-accent="gold">
+            <div class="pricing-card-header">
+              <span class="pricing-card-icon">📢</span>
+              <div>
+                <div class="pricing-card-uid">サービス_2: Digital Marketing</div>
+                <h3 class="pricing-card-title"><span class="neon-text">届ける</span> 広告代理・運用</h3>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="pricing-menu-list">
+                <li><span class="pricing-menu-name">Google・SNS・LINE広告の企画・運用代行</span><span class="pricing-menu-price price-consult">要相談</span></li>
+              </ul>
+              <div class="pricing-card-note"><span class="cyber-cyan-text">></span> 広告の種類・規模に応じてお見積りいたします。まずはお気軽にご相談ください。</div>
+            </div>
+          </div>
+          <div class="pricing-card" data-accent="green">
+            <div class="pricing-card-header">
+              <span class="pricing-card-icon">💻</span>
+              <div>
+                <div class="pricing-card-uid">サービス_3: Application Design</div>
+                <h3 class="pricing-card-title"><span class="neon-text">創る</span> アプリ・システム制作</h3>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="pricing-menu-list">
+                <li><span class="pricing-menu-name">LINE公式アカウント開設＋導入サポート</span><span class="pricing-menu-price">50,000円〜</span></li>
+                <li><span class="pricing-menu-name">カンタン業務自動化ツール（GAS等）</span><span class="pricing-menu-price">50,000円〜</span></li>
+                <li><span class="pricing-menu-name">各種ウェブサイト制作</span><span class="pricing-menu-price">30,000円〜</span><span class="pricing-menu-sub">月額プラン・単発プラン有り</span></li>
+                <li><span class="pricing-menu-name">デジタルサイネージ導入支援</span><span class="pricing-menu-price price-consult">要お見積り</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing-card" data-accent="magenta">
+            <div class="pricing-card-header">
+              <span class="pricing-card-icon">🎓</span>
+              <div>
+                <div class="pricing-card-uid">サービス_4: Education</div>
+                <h3 class="pricing-card-title"><span class="neon-text">育てる</span> デジタル人材育成</h3>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="pricing-menu-list">
+                <li><span class="pricing-menu-name">AI・IT活用講座（1回2h）</span><span class="pricing-menu-price">30,000円〜</span></li>
+                <li><span class="pricing-menu-name">社内研修プログラム（カスタム）</span><span class="pricing-menu-price price-consult">要相談</span></li>
+              </ul>
+              <div class="pricing-card-note"><span class="cyber-cyan-text">></span> 御社の状況によりカリキュラムを組ませていただきます。まずはご相談ください。</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20 log-text pricing-note">
+          ※ 上記は最低金額（ミニマムチャージ）の目安です。<br>
+          ※ ご予算（「10万円以内でできる範囲で頼みたい」等）に合わせた柔軟なご提案も可能です。お気軽にご相談ください。
+        </div>
+        <div class="cta-container mt-40">
+          <button class="btn btn-cyber trigger-nav" data-target="contact">> 今すぐ相談する (Contact)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- [06] PROFILE -->
+    <section class="screen-section" id="profile">
+      <div class="container container-medium">
+        <h2 class="section-title">> 代表プロフィール</h2>
+        <div class="profile-terminal">
+          <div class="term-header">
+            <span>root@sys: cat /users/admin/profile.txt</span>
+          </div>
+          <div class="term-body">
+            <div class="profile-layout">
+              <div class="avatar-box">
+                <div class="avatar-placeholder">[USER_IMAGE]</div>
+                <h3 class="mt-10 cyan-text">小峯 渉</h3>
+              </div>
+              <div class="profile-data">
+                <ul>
+                  <li><span class="data-key">ORIGIN:</span> 神奈川県 足柄上郡</li>
+                  <li><span class="data-key">EDU:</span> 早稲田大学 法学部 法学科卒</li>
+                  <li><span class="data-key">EXP_1:</span> SoftBank / Shop Manager (9y)</li>
+                  <li><span class="data-key">EXP_2:</span> Apple / iPhone Master (7y)</li>
+                  <li><span class="data-key">EXP_3:</span> トヨタモビリティパーツ / ICT推進室</li>
+                  <li><span class="data-key">SKILL:</span> DIY(木工〜App), バイオリン🎻</li>
+                </ul>
+                <div class="system-msg mt-20">
+                  <span class="prompt">> echo MSG:</span>
+                  "現場を知り尽くしたマネジメント経験" × "圧倒的なデジタルの力"
+                </div>
+              </div>
+            </div>
+            <div class="mt-40 execution-logs-section">
+              <div class="log-text log-text-header">> loading execution_logs.dat... [OK]</div>
+              <ul class="execution-logs-list">
+                <li><span class="cyber-gold">[DATA_01]</span> 大手自動車関連企業 コーポレート＆採用サイト構築</li>
+                <li><span class="cyber-gold">[DATA_02]</span> 地方自治体・地方議員向け LINE公式アカウント構築（複数）</li>
+                <li><span class="cyber-gold">[DATA_03]</span> 飲食店・小売店舗向け LINE公式アカウント構築・運用</li>
+                <li><span class="cyber-gold">[DATA_04]</span> 企業プロモーションPV・イベント動画等の制作代行（多数）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cta-container mt-40">
+          <button class="btn btn-cyber trigger-nav" data-target="contact">> 今すぐ相談する (Contact)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- [EXE] CONTACT -->
+    <section class="screen-section" id="contact">
+      <div class="container container-medium text-center">
+        <h2 class="section-title">> お問い合わせ</h2>
+        <div class="terminal-box text-left margin-auto terminal-box-full">
+          <div class="term-header">
+            <span>root@sys: ./execute_contact.sh</span>
+          </div>
+          <div class="term-body">
+            <p class="log-text mb-30">「ITのことは詳しくないけれど、なんとなく困っている…」そんな方のための相談窓口です。<br>LINEまたは下記のフォームから、お茶を飲むような感覚で気軽にお悩みをお聞かせください。</p>
+            <div class="hero-actions justify-center mb-40">
+              <a href="https://lin.ee/rzcWtqQ" target="_blank" rel="noopener noreferrer" class="btn btn-cyber btn-full-width">LINEで手軽に相談する（推奨）</a>
+            </div>
+            <div class="log-text form-divider mb-20">> メールフォームからのお問い合わせ</div>
+            <script>var submitted = false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" title="Hidden form submission frame" class="hidden-iframe" onload="if(submitted){alert('送信が完了しました。お問い合わせありがとうございます！'); submitted=false; document.getElementById('contact-form').reset();}"></iframe>
+            <form id="contact-form" class="cyber-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeZhTQe4ZQi4bC5wAkZSnjXF8GTgo_aqDOUPL5--3Zbef4CAg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+              <div class="form-group">
+                <label for="name">> お名前 (Name)</label>
+                <input type="text" id="name" name="entry.452810390" required class="cyber-input" placeholder="例: 山田 太郎">
+              </div>
+              <div class="form-group">
+                <label for="email">> メールアドレス (Email)</label>
+                <input type="email" id="email" name="entry.480717590" required class="cyber-input" placeholder="例: sample@example.com">
+              </div>
+              <div class="form-group">
+                <label for="message">> ご相談内容 (Message)</label>
+                <textarea id="message" name="entry.22870105" rows="5" required class="cyber-input" placeholder="現在の課題やご相談したいことなどを自由にご記入ください。"></textarea>
+              </div>
+              <div class="form-actions mt-20 text-right pb-40">
+                <button type="submit" class="btn btn-outline submit-btn">[EXE] メッセージを送信</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Contact Action -->
+  <div class="floating-cta">
+    <button class="btn btn-cyber trigger-nav" data-target="contact">
+      <span class="cta-icon">📩</span><span class="cta-text">今すぐ相談</span>
+    </button>
+  </div>
+
+  <script src="js/main.js?v=19"></script>
+</body>
+</html>
