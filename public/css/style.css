@@ -293,6 +293,7 @@ body::before {
 /* Home Section */
 .hero-title {
   font-family: var(--font-mono);
+  font-weight: bold;
   font-size: 3rem;
   color: var(--text-main);
   margin-bottom: 10px;
@@ -516,7 +517,10 @@ body::before {
   .terminal-box { margin: 0 auto; }
 }
 
-.hero-title-main { font-size: 2.2rem; }
+.hero-title-main { font-size: 2.8rem; line-height: 1.4; }
+@media (max-width: 768px) {
+  .hero-title-main { font-size: 1.8rem; }
+}
 .crypto-text-desc { line-height: 1.8; color: #ddd; font-family: var(--font-body); }
 .bold-gold { font-weight: bold; }
 .execution-logs-section { border-top: 1px dashed rgba(0, 255, 65, 0.3); padding-top: 20px; }
@@ -1099,5 +1103,8 @@ body::before {
   .result-card-meta {
     flex-direction: column;
     gap: 5px;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 }
